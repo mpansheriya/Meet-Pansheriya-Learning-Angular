@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Phone } from './models/phone';
-import {NgFor,NgIf} from "@angular/common"; // Adjust path if needed
+import {NgFor,NgIf} from "@angular/common";
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet,NgFor,NgIf],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'] // Fixed to styleUrls
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = 'Phone List';
