@@ -1,1 +1,26 @@
-<p>content-list works!</p>
+<div class="container">
+  <h2>Phone List</h2>
+  <table>
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Brand</th>
+      <th>Name</th>
+      <th>Colour</th>
+      <th>Type</th>
+      <th>Admin</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let phone of phoneList" (click)="selectPhone(phone)">
+      <td>{{ phone.id }}</td>
+      <td>{{ phone.brand }}</td>
+      <td>{{ phone.name }}</td>
+      <td>{{ phone.colour }}</td>
+      <td>{{ phone.type }}</td>
+      <td>{{ phone.isAdmin ? 'Yes' : 'No' }}</td>
+    </tr>
+    </tbody>
+  </table>
+  <app-phone-detail [phone]="selectedPhone"></app-phone-detail>
+</div>

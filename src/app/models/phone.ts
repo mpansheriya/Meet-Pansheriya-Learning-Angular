@@ -1,6 +1,6 @@
 export interface Phone {
-
-  Brand: string,
+  id: number;
+  brand: string,
   name: string,
   colour: string,
   type: string,

@@ -1,1 +1,9 @@
-<p>content-detail works!</p>
+<div *ngIf="phone" class="phone-detail">
+  <h2>Phone Details</h2>
+  <p><strong>ID:</strong> {{ phone.id }}</p>
+  <p><strong>Brand:</strong> {{ phone.brand }}</p>
+  <p><strong>Name:</strong> {{ phone.name }}</p>
+  <p><strong>Colour:</strong> {{ phone.colour }}</p>
+  <p><strong>Type:</strong> {{ phone.type }}</p>
+  <p><strong>Supports USB Type-C:</strong> {{ phone.typec ? 'Yes' : 'No' }}</p>
+</div>

@@ -1,11 +1,4 @@
 <div class="app-container">
-  <h1 class="title">{{ title }}</h1>
-  <div class="phone-list">
-    <div *ngFor="let phone of phoneList" class="phone-item">
-      <h2>{{ phone.Brand }} - {{ phone.name }}</h2>
-      <p>Colour: {{ phone.colour }}</p>
-      <p>Type: {{ phone.type }}</p>
-      <p *ngIf="phone.typec">Supports USB Type-C</p>
-    </div>
-  </div>
+  <h1>{{ title }}</h1>
+  <app-phone-list></app-phone-list>
 </div>
