@@ -23,7 +23,6 @@ export class ContentListComponent implements OnInit {
   constructor(private contentService: ContentService) {
     // This constructor is primarily used for dependency injection
   }
-
   ngOnInit() {
     // This lifecycle hook is a good place to fetch and init our data
     this.contentService.getContents().subscribe({
