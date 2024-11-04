@@ -1,0 +1,47 @@
+<!-- modify-phone.component.html -->
+<form [formGroup]="contentForm" (ngSubmit)="onSubmit()">
+  <!-- ID Field -->
+  <div class="form-group">
+    <label for="id">ID</label>
+    <input type="number" id="id" formControlName="id" />
+  </div>
+
+  <!-- Brand Field -->
+  <div class="form-group">
+    <label for="brand">Brand</label>
+    <input type="text" id="brand" formControlName="brand" />
+  </div>
+
+  <!-- Name Field -->
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" id="name" formControlName="name" />
+  </div>
+
+  <!-- Colour Field -->
+  <div class="form-group">
+    <label for="colour">Colour</label>
+    <input type="text" id="colour" formControlName="colour" />
+  </div>
+
+  <!-- Type Field -->
+  <div class="form-group">
+    <label for="type">Type</label>
+    <input type="text" id="type" formControlName="type" />
+  </div>
+
+  <!-- TypeC Checkbox -->
+  <div class="form-group">
+    <label for="typec">TypeC</label>
+    <input type="checkbox" id="typec" formControlName="typec" />
+  </div>
+
+  <!-- Submit Button (Add or Update) -->
+  <button type="submit">Submit</button>
+
+  <!-- Delete Button (Always Displayed Now) -->
+  <button type="button" (click)="onDelete()">Delete</button>
+
+  <!-- Back Button -->
+  <button type="button" (click)="navigateToContentList()">Back to List</button>
+</form>

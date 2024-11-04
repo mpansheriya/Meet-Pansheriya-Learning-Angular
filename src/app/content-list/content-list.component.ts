@@ -3,16 +3,17 @@ import { Phone } from '../models/phone';
 import { NgForOf } from '@angular/common';
 import { ContentDetailComponent } from '../content-detail/content-detail.component';
 import { ContentService } from '../services/content.service';
-
+import {RouterLink} from "@angular/router";
 Component({
-  selector: 'app-phone-list',
+  selector: 'app-content-list',
   standalone: true,
   imports: [
     NgForOf,
-    ContentDetailComponent
+    ContentDetailComponent,
+    RouterLink,
   ],
-  templateUrl: './phone-list.component.html',
-  styleUrls: ['./phone-list.component.scss']
+  templateUrl: './content-list.component.html',
+  styleUrls: ['./content-list.component.scss']
 })
 export class ContentListComponent implements OnInit {
   // Placeholder values for the table
@@ -27,13 +28,13 @@ export class ContentListComponent implements OnInit {
     // This lifecycle hook is a good place to fetch and init our data
     this.contentService.getContents().subscribe({
       next: (data: Phone[]) => this.phoneList = data,
-      error: err => console.error('Error fetching Phones', err),
-      complete: () => console.log('Phone data fetch complete!')
+      error: err => console.error('Error fetching Contents', err),
+      complete: () => console.log('Content data fetch complete!')
     });
   }
 
   selectedPhone?: Phone;
   selectPhone(phone: Phone): void {
-    this.selectedPhone = phone;
+    this.selectedContent = content;
   }
 }

@@ -1,4 +1,14 @@
+<!-- Future Nav bar-->
+<div class="nav-bar">
+  <nav>
+    <a routerLink="/contents" routerLinkActive="active">Content List</a>
+    <a routerLink="/modify-content" routerLinkActive="active">Modify Content</a>
+  </nav>
+</div>
+
 <div class="app-container">
   <h1>{{ title }}</h1>
-  <app-phone-list></app-phone-list>
+
+
+  <router-outlet></router-outlet>
 </div>
