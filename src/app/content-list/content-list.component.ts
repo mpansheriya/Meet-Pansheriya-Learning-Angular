@@ -34,6 +34,6 @@ export class ContentListComponent implements OnInit {
 
   selectedPhone?: Phone;
   selectPhone(phone: Phone): void {
-    this.selectedContent = content;
+    //this.selectedContent = content;
   }
 }
