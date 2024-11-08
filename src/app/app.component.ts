@@ -1,16 +1,15 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { Phone } from "./models/phone";
-import { JsonPipe, NgForOf } from "@angular/common";
-import { ContentListComponent } from "./content-list/content-list.component";
-
+import {RouterLink, RouterLinkActive, RouterOutlet} from '@angular/router';
+import {Phone} from "./models/phone";
+import {JsonPipe, NgForOf} from "@angular/common";
+import {ContentListComponent} from "./content-list/content-list.component";
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NgForOf, JsonPipe, ContentListComponent],
+  imports: [RouterOutlet, NgForOf, JsonPipe, ContentListComponent, RouterLink, RouterLinkActive],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'Phone Management System';
+  title = 'Content Management System';
 }
