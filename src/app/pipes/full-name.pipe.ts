@@ -6,6 +6,6 @@ import { Phone } from "../models/phone";
 })
 export class FullNamePipe implements PipeTransform {
   transform(phone: Phone): string {
-    return `${phone.firstName} ${phone.lastName}`;
+    return `${phone.brand} ${phone.colour}`;
   }
 }

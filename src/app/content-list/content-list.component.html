@@ -9,16 +9,17 @@
       <th>Brand</th>
       <th>Name</th>
       <th>Colour</th>
-      <th>Admin</th>
+      <th>Budget</th>
+      <th>TypeC</th>
     </tr>
     </thead>
     <tbody>
     <tr *ngFor="let student of phoneList" [routerLink]="['/contents',content.id ]">
        <td>{{ content.id }}</td>
-      <td>{{ content.brand }}</td>
-      <td>{{ content.name }}</td>
+      <td>{{ content | fullName  }}</td> <!-- custom pipe -->
       <td>{{ content.colour }}</td>
-      <td>{{ content.isAdmin ? 'Yes' : 'No' }}</td>
+      <td>{{content.budget | currency: 'CAD': "symbol-narrow"}}</td><!-- currency pipe -->
+      <td>{{ content.typeC ? 'Yes' : 'No' }}</td>
     </tr>
     </tbody>
   </table>

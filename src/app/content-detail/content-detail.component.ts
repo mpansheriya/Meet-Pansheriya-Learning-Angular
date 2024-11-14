@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Phone } from '../models/phone';
-import { NgIf } from "@angular/common";
+import { CurrencyPipe,NgIf } from "@angular/common";
 import { ActivatedRoute, Router } from "@angular/router";
 import { ContentService } from "../services/content.service";
 
@@ -8,7 +8,8 @@ import { ContentService } from "../services/content.service";
   selector: 'app-content-detail',
   standalone: true,
   imports: [
-    NgIf
+    NgIf,
+    CurrencyPipe
   ],
   templateUrl: './content-detail.component.html',
   styleUrls: ['./content-detail.component.css']
