@@ -3,7 +3,6 @@ export interface Phone {
   brand: string,
   name: string,
   colour: string,
-  type: string,
   typec?: boolean
 
 }

@@ -1,10 +1,9 @@
 <div *ngIf="content" class="content-detail">
-  <h2>Contents Details Details</h2>
+  <h2>Contents  Details</h2>
   <p><strong>ID:</strong> {{ content.id }}</p>
   <p><strong>Brand:</strong> {{ content.brand }}</p>
   <p><strong>Name:</strong> {{ content.name }}</p>
   <p><strong>Colour:</strong> {{ content.colour }}</p>
-  <p><strong>Type:</strong> {{ content.type }}</p>
   <p><strong>Supports USB Type-C:</strong> {{ content.typec ? 'Yes' : 'No' }}</p>
   <button (click)="goBackward()" [disabled]="currentIndex === 0">Previous</button>
   <button (click)="goForward()" [disabled]="currentIndex === phoneList.length - 1">Next</button>
