@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Phone } from '../models/phone';
-import { NgForOf, NgIf } from '@angular/common';
+import {CurrencyPipe, NgForOf, NgIf, UpperCasePipe} from "@angular/common";
 import { ContentDetailComponent } from '../content-detail/content-detail.component';
 import { ContentService } from '../services/content.service';
 import {RouterLink} from "@angular/router";
+import {FullNamePipe} from "../pipes/full-name.pipe";
 Component({
   selector: 'app-content-list',
   standalone: true,
@@ -11,7 +12,10 @@ Component({
     NgForOf,
     ContentDetailComponent,
     RouterLink,
-    NgIf
+    NgIf,
+    CurrencyPipe,
+    FullNamePipe,
+    UpperCasePipe
   ],
   templateUrl: './content-list.component.html',
   styleUrls: ['./content-list.component.scss']
