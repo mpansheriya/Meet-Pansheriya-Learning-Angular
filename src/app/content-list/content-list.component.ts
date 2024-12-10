@@ -5,6 +5,7 @@ import { ContentDetailComponent } from '../content-detail/content-detail.compone
 import { ContentService } from '../services/content.service';
 import {RouterLink} from "@angular/router";
 import {FullNamePipe} from "../pipes/full-name.pipe";
+import {HoverHighlightDirective} from "../directives/hover-highlight.directive";
 Component({
   selector: 'app-content-list',
   standalone: true,
