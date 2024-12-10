@@ -4,6 +4,8 @@ export interface Phone {
   name: string,
   colour: string,
   budget: number,
+classList: string[]
+  grades: number[]
   typec?: boolean
 
 }
