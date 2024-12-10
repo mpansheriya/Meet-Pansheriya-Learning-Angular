@@ -3,7 +3,8 @@ import { Phone } from '../models/phone';
 import { CurrencyPipe,NgIf } from "@angular/common";
 import { ActivatedRoute, Router } from "@angular/router";
 import { ContentService } from "../services/content.service";
-
+import {HoverHighlightDirective} from "../directives/hover-highlight.directive";
+import {TextColorDirective} from "../directives/text-colour.directive";
 @Component({
   selector: 'app-content-detail',
   standalone: true,
