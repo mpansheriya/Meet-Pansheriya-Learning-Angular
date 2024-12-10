@@ -6,6 +6,29 @@
   <p><strong>Colour:</strong> {{ content.colour }}</p>
   <p><strong>Budget:</strong> {{ student.budget | currency: 'CAD': "symbol-narrow" }}</p>
   <p><strong>Supports USB Type-C:</strong> {{ content.typec ? 'Yes' : 'No' }}</p>
+  <h3>Class Grades</h3>
+  <table >
+    <thead>
+    <tr>
+      <th>Class Name</th>
+      <th>Grade</th>
+    </tr>
+    </thead>
+    <tbody> <!--Put the highlight directive on it for funsies
+    student-detail.component.html-->
+    <tr *ngFor="let className of student.classList; let i = index" [appHoverHighlight]="'lightblue'" [appTextColor]="student.grades[i]">
+      <td>{{ className }}</td>
+      <!-- Passing the grade to the directive to determine the color -->
+      <td >{{ student.grades[i] }}</td>
+    </tr>
+    </tbody>
+  </table>
+
+  <button (click)="goBackward()" [disabled]="currentIndex === 0">Previous</button>
+  <button (click)="goForward()" [disabled]="currentIndex === userList.length - 1">Next</button>
+  <button (click)="goBack()">Back to Student List</button>
+</div>
+<div *ngIf="error" class="error">{{ error }}</div>
   <button (click)="goBackward()" [disabled]="currentIndex === 0">Previous</button>
   <button (click)="goForward()" [disabled]="currentIndex === phoneList.length - 1">Next</button>
   <button (click)="goBack()">Back to Content List</button>
