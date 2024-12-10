@@ -4,7 +4,8 @@ import {ContentService} from "../services/content.service";
 import {FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators} from "@angular/forms";
 import {ActivatedRoute, Router} from "@angular/router";
 import {NgIf} from "@angular/common";
-
+import {DisableButtonDirective} from "../directives/disable-button.directive";
+import {AutoFocusDirective} from "../directives/auto-focus.directive";
 
 
 @Component({
